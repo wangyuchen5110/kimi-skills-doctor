@@ -1,0 +1,20 @@
+{
+  "name": "kimi-skills-doctor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kimi Code plugin: audit the skills Kimi Code loads — token budget, shadowing, broken references.",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/validate-plugin.mjs",
+    "validate": "node scripts/validate-plugin.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": ["kimi", "kimi-code", "skills", "audit", "token-budget", "plugin"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangyuchen5110/kimi-skills-doctor.git"
+  },
+  "license": "MIT"
+}

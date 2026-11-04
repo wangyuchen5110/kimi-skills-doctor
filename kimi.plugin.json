@@ -1,0 +1,24 @@
+{
+  "name": "kimi-skills-doctor",
+  "version": "0.1.0",
+  "description": "Audit Kimi Code skills: per-step token cost, shadowed duplicates and broken references.",
+  "keywords": ["kimi", "kimi-code", "skills", "audit", "token-budget"],
+  "author": "wangyuchen5110",
+  "homepage": "https://github.com/wangyuchen5110/kimi-skills-doctor",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Skills Doctor",
+    "shortDescription": "Audit the skills Kimi Code loads",
+    "longDescription": "Measure the per-step token cost of every Kimi Code skill, find shadowed duplicates and broken references, and get a measured trim/hide plan. Runs 100% locally.",
+    "developerName": "wangyuchen5110",
+    "websiteURL": "https://github.com/wangyuchen5110/kimi-skills-doctor"
+  },
+  "skills": "./skills/",
+  "commands": "./commands/",
+  "mcpServers": {
+    "skills-doctor": {
+      "command": "npx",
+      "args": ["-y", "opencode-skills-doctor@0.9.4", "mcp"]
+    }
+  }
+}
