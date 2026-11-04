@@ -12,6 +12,19 @@ Kimi Code 会把每个可用 skill 的 name / description / location 注入到�
 
 CLI 和桌面端都可用（两端共享 `~/.kimi-code/`）。底层是 [`opencode-skills-doctor`](https://github.com/wangyuchen5110/opencodeplugginprogram)。
 
+<p align="center">
+  <a href="https://github.com/wangyuchen5110/kimi-skills-doctor/actions/workflows/test.yml"><img src="https://github.com/wangyuchen5110/kimi-skills-doctor/actions/workflows/test.yml/badge.svg" alt="tests"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-3fb950?style=for-the-badge" alt="MIT"></a>
+  <img src="https://img.shields.io/badge/node-%E2%89%A520-3fb950?style=for-the-badge" alt="Node >= 20">
+  <img src="https://img.shields.io/badge/Kimi%20Code-plugin-ff6b35?style=for-the-badge" alt="Kimi Code plugin">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/runs%20locally-100%25-3fb950?style=for-the-badge" alt="本地运行">
+  <img src="https://img.shields.io/badge/telemetry-none-3fb950?style=for-the-badge" alt="无遥测">
+  <img src="https://img.shields.io/badge/user%20data-never%20read-3fb950?style=for-the-badge" alt="不读取用户数据">
+</p>
+
 ## 安装
 
 在 Kimi Code 会话里：
@@ -36,6 +49,16 @@ CLI 和桌面端都可用（两端共享 `~/.kimi-code/`）。底层是 [`openco
 ```
 
 插件会被复制到 `$KIMI_CODE_HOME/plugins/managed/kimi-skills-doctor/`（默认 `~/.kimi-code/...`），CLI 与桌面端共用。
+
+### 自定义 marketplace
+
+仓库里还带了一份 [marketplace.json](marketplace.json)，团队可以把它加成自定义插件源，而不是每次用 URL 安装：
+
+```text
+/plugins marketplace ./marketplace.json
+```
+
+（也可以传这个文件的 raw GitHub URL；桌面端在「设置 → 插件」里添加同一来源。）
 
 > Kimi Code 插件不支持命令型 JS tools，所以真正的审计能力通过 **MCP server + skill + 斜杠命令** 提供。
 

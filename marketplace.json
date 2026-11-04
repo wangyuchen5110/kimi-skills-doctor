@@ -1,0 +1,10 @@
+{
+  "version": "2",
+  "plugins": [
+    {
+      "id": "kimi-skills-doctor",
+      "displayName": "Skills Doctor",
+      "source": "https://github.com/wangyuchen5110/kimi-skills-doctor"
+    }
+  ]
+}

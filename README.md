@@ -18,6 +18,19 @@ A **Kimi Code plugin** that packages everything in one install:
 It runs on the Kimi Code **CLI** and the **desktop app** (both share
 `~/.kimi-code/`). Powered by [`opencode-skills-doctor`](https://github.com/wangyuchen5110/opencodeplugginprogram).
 
+<p align="center">
+  <a href="https://github.com/wangyuchen5110/kimi-skills-doctor/actions/workflows/test.yml"><img src="https://github.com/wangyuchen5110/kimi-skills-doctor/actions/workflows/test.yml/badge.svg" alt="tests"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-3fb950?style=for-the-badge" alt="MIT license"></a>
+  <img src="https://img.shields.io/badge/node-%E2%89%A520-3fb950?style=for-the-badge" alt="Node >= 20">
+  <img src="https://img.shields.io/badge/Kimi%20Code-plugin-ff6b35?style=for-the-badge" alt="Kimi Code plugin">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/runs%20locally-100%25-3fb950?style=for-the-badge" alt="runs locally">
+  <img src="https://img.shields.io/badge/telemetry-none-3fb950?style=for-the-badge" alt="no telemetry">
+  <img src="https://img.shields.io/badge/user%20data-never%20read-3fb950?style=for-the-badge" alt="user data is never read">
+</p>
+
 ## Install
 
 From GitHub, inside a Kimi Code session:
@@ -43,6 +56,18 @@ or load the skill explicitly:
 
 The plugin is installed under `$KIMI_CODE_HOME/plugins/managed/kimi-skills-doctor/`
 (default `~/.kimi-code/…`) and works in both the CLI and the desktop app.
+
+### Custom marketplace
+
+This repo also ships a [`marketplace.json`](marketplace.json) so a team can add it
+as a custom plugin source instead of installing by URL:
+
+```text
+/plugins marketplace ./marketplace.json
+```
+
+(or pass that file's raw GitHub URL; the desktop app accepts the same source under
+Settings → Plugins).
 
 > Kimi Code plugins cannot run command-style JS tools, so the actual audit is
 > provided through the MCP server + the skill + slash commands.
